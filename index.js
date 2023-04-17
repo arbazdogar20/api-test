@@ -5,11 +5,14 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
 
-app.get('/ap/v1/test-data', (req, res) => {
+app.post('/api/v1/test-data', (req, res) => {
+  const user = req.body;
+  console.log(user);
   return res.status(200).json({
     success: true,
     message:
       'This a test route because I deploy it on cyclic server just for testing.',
+    data: user,
   });
 });
 
