@@ -5,8 +5,8 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
 
-app.post('/api/v1/test-data', (req, res) => {
-  const user = req.body;
+app.get('/api/v1/test-data', (req, res) => {
+  const user = "Muhammad Arbaz Dogar";
   return res.status(200).json({
     success: true,
     message:
